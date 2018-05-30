@@ -43,4 +43,10 @@ class Game
     return false
   end
 
+  def type_of_end(word)
+    return if !is_game_over?(word)
+    return "lose" if @players.length() == 0
+    return "win" if word.has_player_won?
+  end
+
 end

@@ -72,4 +72,17 @@ class GameTest < MiniTest::Test
     assert_equal(true, @game1.is_game_over?(@word1))
   end
 
+  def test_type_of_game_over__no_players_left
+    assert_equal("lose", @game1.type_of_end(@word1))
+  end
+
+  def test_type_of_game_over__word_guessed
+    @game1.add_player(@player1)
+    @word1.add_letter?("h")
+    @word1.add_letter?("e")
+    @word1.add_letter?("l")
+    @word1.add_letter?("o")
+    assert_equal("win", @game1.type_of_end(@word1))
+  end
+
 end
