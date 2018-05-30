@@ -25,4 +25,11 @@ class GameTest < MiniTest::Test
     assert_equal(["h"], @game1.guessed_letters())
   end
 
+  def test_add_guessed_letter__letter_already_guessed
+    @game1.add_guessed_letter("h")
+    @game1.add_guessed_letter("h")
+    assert_equal(1, @game1.guessed_letters().length())
+  end
+
+
 end

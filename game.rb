@@ -17,6 +17,7 @@ class Game
   end
 
   def add_guessed_letter(letter)
+    return if @guessed_letters.include?(letter)
     @guessed_letters.push(letter)
   end
 
