@@ -24,11 +24,16 @@ class HiddenWord
 
   def add_letter(letter)
     count = 0
+    is_letter_in_word = false
     for character in @word_array
-      @working_word_array[count] = letter if character == letter
+      if character == letter
+        @working_word_array[count] = letter
+        is_letter_in_word = true
+      end
       count += 1
     end
     @working_word = @working_word_array.join()
+    return is_letter_in_word
   end
 
 end
