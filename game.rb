@@ -21,4 +21,6 @@ class Game
     @guessed_letters.push(letter)
   end
 
+
+
 end

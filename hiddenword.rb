@@ -22,4 +22,13 @@ class HiddenWord
     return @word == @working_word
   end
 
+  def add_letter(letter)
+    count = 0
+    for character in @word_array
+      @working_word_array[count] = letter if character == letter
+      count += 1
+    end
+    @working_word = @working_word_array.join()
+  end
+
 end
