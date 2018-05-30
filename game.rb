@@ -16,13 +16,26 @@ class Game
     @players.push(player)
   end
 
+  def is_player_playing?(questioned_player)
+    for player in @players
+      return true if player == questioned_player
+    end
+    return false
+  end
+
   def add_guessed_letter(player, letter, word)
     return if @guessed_letters.include?(letter)
-    @guessed_letters.push(letter)
+    @guessed_letters.push(letter) || !player.is_player_playing?
     is_letter_in_word = word.add_letter?(letter)
     player.lose_life() if !is_letter_in_word
   end
 
-
+  def remove_dead_players()
+    alive_players = []
+    for player in @players
+      alive_players.push(player) if !player.is_dead?()
+    end
+    @players = alive_players
+  end
 
 end
