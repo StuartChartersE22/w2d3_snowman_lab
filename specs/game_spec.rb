@@ -20,4 +20,9 @@ class GameTest < MiniTest::Test
     assert_equal(1,@game1.number_of_players())
   end
 
+  def test_add_guessed_letter__letter_not_already_guessed
+    @game1.add_guessed_letter("h")
+    assert_equal(["h"], @game1.guessed_letters())
+  end
+
 end
