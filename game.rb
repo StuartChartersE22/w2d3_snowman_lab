@@ -24,8 +24,8 @@ class Game
   end
 
   def add_guessed_letter(player, letter, word)
-    return if @guessed_letters.include?(letter)
-    @guessed_letters.push(letter) || !player.is_player_playing?
+    return if @guessed_letters.include?(letter) || !player.is_player_playing?
+    @guessed_letters.push(letter)
     is_letter_in_word = word.add_letter?(letter)
     player.lose_life() if !is_letter_in_word
   end
