@@ -14,13 +14,13 @@ class HiddenWordTest < MiniTest::Test
   end
 
   def test_add_guessed_letter__in_word
-    is_letter_in_word = @word1.add_letter("h")
+    is_letter_in_word = @word1.add_letter?("h")
     assert_equal("h****", @word1.show_current_progress())
     assert_equal(true, is_letter_in_word)
   end
 
   def test_add_guessed_letter__not_in_word
-    is_letter_in_word = @word1.add_letter("j")
+    is_letter_in_word = @word1.add_letter?("j")
     assert_equal("*****", @word1.show_current_progress())
     assert_equal(false, is_letter_in_word)
   end

@@ -22,7 +22,7 @@ class HiddenWord
     return @word == @working_word
   end
 
-  def add_letter(letter)
+  def add_letter?(letter)
     count = 0
     is_letter_in_word = false
     for character in @word_array
