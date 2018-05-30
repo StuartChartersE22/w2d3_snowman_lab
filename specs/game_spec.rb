@@ -60,4 +60,8 @@ class GameTest < MiniTest::Test
     assert_equal(1,@game1.number_of_players())
   end
 
+  def test_is_game_over__no_players_left
+    assert_equal(true, @game1.is_game_over?(@word1))
+  end
+
 end

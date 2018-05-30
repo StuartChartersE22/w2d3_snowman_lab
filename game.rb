@@ -38,4 +38,9 @@ class Game
     @players = alive_players
   end
 
+  def is_game_over?(word)
+    return true if @players.length() == 0 || word.has_player_won?
+    return false
+  end
+
 end
