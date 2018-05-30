@@ -55,6 +55,9 @@ class GameTest < MiniTest::Test
     @player2.lose_life()
     @player2.lose_life()
 
+    @game1.remove_dead_players()
+
+    assert_equal(1,@game1.number_of_players())
   end
 
 end
