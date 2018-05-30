@@ -64,4 +64,12 @@ class GameTest < MiniTest::Test
     assert_equal(true, @game1.is_game_over?(@word1))
   end
 
+  def test_is_game_over__word_guessed
+    @word1.add_letter?("h")
+    @word1.add_letter?("e")
+    @word1.add_letter?("l")
+    @word1.add_letter?("o")
+    assert_equal(true, @game1.is_game_over?(@word1))
+  end
+
 end
