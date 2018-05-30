@@ -11,4 +11,8 @@ class Player
     @lives -= 1
   end
 
+  def is_dead?()
+    return @lives == 0
+  end
+
 end

@@ -16,4 +16,8 @@ class PlayerTest < MiniTest::Test
     assert_equal(5, @player1.lives())
   end
 
+  def test_is_dead?
+    assert_equal(false, @player1.is_dead?)
+  end
+
 end
