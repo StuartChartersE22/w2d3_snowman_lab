@@ -6,8 +6,7 @@ class GameTest < MiniTest::Test
 
   def setup
     @game1 = Game.new("test1")
-    @word1 = HiddenWord.new()
-    @word1.set_word("hello")
+    @word1 = HiddenWord.new("hello")
   end
 
   def test_game_has_name
