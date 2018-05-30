@@ -5,8 +5,7 @@ require_relative("../game.rb")
 class HiddenWordTest < MiniTest::Test
 
   def setup
-    @word1 = HiddenWord.new()
-    @word1.set_word("hello")
+    @word1 = HiddenWord.new("hello")
   end
 
   def test_show_guessed_characters__none

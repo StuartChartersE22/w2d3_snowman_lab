@@ -1,7 +1,7 @@
 class HiddenWord
 
-  def initialize()
-    set_word("pneumonoultramicroscopicsilicovolcanoconiosis")
+  def initialize(word)
+    set_word(word)
   end
 
   def set_word(word)
@@ -17,6 +17,7 @@ class HiddenWord
   def show_current_progress()
     return @hidden_word
   end
+
 
 
 end
